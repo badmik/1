@@ -17,9 +17,14 @@ import {default as model} from "./model.js";
     }
 
 
+    $(document).on("click", "input[createTask]", controller.send());
+    $(document).on("click", "input[cancelEdit]", controller.cancel());
+
+
+
     $(function () {
         tasksTemplateProcessor =  Handlebars.compile($("#tasks-list-template").html());
-        $(document).on("click", "input[send]", send);
+        $(document).on("click", "input[send]", controller.send);
         $("#createTask").click(
             function () {
                 tasksTemplateProcessor.add($("#title").val());

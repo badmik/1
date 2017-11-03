@@ -12,12 +12,13 @@
 </head>
 <body>
 <header>
-
-    <select class="styleSwitcher">
+    <label for="styleSwitcher">Style</label>
+    <select id="styleSwitcher">
         <option value="dark">Dark</option>
         <option value="Light">Light</option>
     </select>
 </header>
+
 <script src="js/array.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/handlebars.min.js"></script>
@@ -26,17 +27,16 @@
 <script type="module" src="../js/tasks.js"></script>
 <main>
 
-    <form>
+    <form id="myForm">
         <label for="name">Name</label>
-        <input type="text" name="add name" id="name"><br>
+        <input type="text" value="add name" id="name"><br>
         <label for="description">Description</label>
-        <input type="textfield" name="description"id="description">
+        <input type="text" value="add description" id="description">
         <label for="date">Date</label>
-        <input type="date" name="duedate"id="date">
+        <input type="date" id="date">
     </form>
-    <input type="button" class="btn success" value="send" id="createTask"></input>
-
-    <a href="index.html" class="btn danger cancel">Cancel</a>
+    <input type="button" class="btn success" value="send" id="createTask">
+    <input type="button" class="btn danger cancel" value="Cancel" id="cancelEdit">
 </main>
 
 </body>

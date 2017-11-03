@@ -48,6 +48,7 @@ class Controller {
     }
     bootstrap() {
         $("#createTask").on("click", () => this.send());
+        $("#cancelEdit").on("click", () => this.cancel());
     }
 
     send() {
@@ -57,6 +58,12 @@ class Controller {
             document.getElementById("date").value);
         //document.getElementById("date").value;
         this.taskManager.add(newTask);
+        }
+
+
+    cancel(){
+        document.getElementById("myForm").reset();
+
     }
 }
 
